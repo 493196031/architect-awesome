@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.5.2" pages="2">
+  <diagram name="第 1 页" id="OU2rJmPo4sptZHgtXWf4">
+    <mxGraphModel dx="1272" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="O2VfRxgcmKnsViuj3DNZ" name="第 2 页">
+    <mxGraphModel dx="1042" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-1" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="用户浏览器" vertex="1">
+          <mxGeometry height="40" width="120" x="580" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-2" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="瑞数（安全防护）&#xa;拦截爬虫/攻击" vertex="1">
+          <mxGeometry height="40" width="120" x="580" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-3" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;" value="F5（负载均衡）&#xa;内网流量分发" vertex="1">
+          <mxGeometry height="40" width="120" x="580" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-4" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;" value="Nginx（反向代理）&#xa;SSL卸载+IP限流+访问控制" vertex="1">
+          <mxGeometry height="40" width="160" x="580" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-5" parent="1" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;" value="内网老服务&#xa;（未迁移云）" vertex="1">
+          <mxGeometry height="40" width="120" x="800" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-6" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Ingress（集团云平台）&#xa;K8S流量入口" vertex="1">
+          <mxGeometry height="40" width="160" x="580" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-7" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Spring Cloud Gateway&#xa;鉴权+路由+服务限流" vertex="1">
+          <mxGeometry height="40" width="160" x="580" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-8" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="待办服务" vertex="1">
+          <mxGeometry height="40" width="80" x="380" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-9" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="流程服务" vertex="1">
+          <mxGeometry height="40" width="80" x="490" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-10" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="新闻服务" vertex="1">
+          <mxGeometry height="40" width="80" x="600" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-11" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="门户服务" vertex="1">
+          <mxGeometry height="40" width="80" x="710" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-12" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="MySQL（共享实例）&#xa;⚠️ 多项目共用" vertex="1">
+          <mxGeometry height="40" width="160" x="480" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-13" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Redis" vertex="1">
+          <mxGeometry height="40" width="80" x="660" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-14" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-1" target="JPzm7XIe0H7Mve9jYzI9-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-15" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-2" target="JPzm7XIe0H7Mve9jYzI9-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-16" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-3" target="JPzm7XIe0H7Mve9jYzI9-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-17" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-4" style="dashed=1;" target="JPzm7XIe0H7Mve9jYzI9-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-18" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-4" target="JPzm7XIe0H7Mve9jYzI9-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-19" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-6" target="JPzm7XIe0H7Mve9jYzI9-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-20" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-7" target="JPzm7XIe0H7Mve9jYzI9-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-21" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-7" target="JPzm7XIe0H7Mve9jYzI9-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-22" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-7" target="JPzm7XIe0H7Mve9jYzI9-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-23" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-7" target="JPzm7XIe0H7Mve9jYzI9-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-24" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-8" target="JPzm7XIe0H7Mve9jYzI9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-25" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-9" target="JPzm7XIe0H7Mve9jYzI9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-26" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-10" target="JPzm7XIe0H7Mve9jYzI9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-27" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-11" target="JPzm7XIe0H7Mve9jYzI9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JPzm7XIe0H7Mve9jYzI9-28" edge="1" parent="1" source="JPzm7XIe0H7Mve9jYzI9-8" target="JPzm7XIe0H7Mve9jYzI9-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
