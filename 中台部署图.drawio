@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.5.2">
+  <diagram name="第 1 页" id="JQwiXbL5wR7gUJsOJkwH">
+    <mxGraphModel dx="1042" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-1" parent="1" style="swimlane;fillColor=#f0f8ff;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" value="K8S 集群（集团云平台）" vertex="1">
+          <mxGeometry height="480" width="640" x="250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-2" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Ingress Controller&#xa;流量入口" vertex="1">
+          <mxGeometry height="40" width="160" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-3" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;" value="Gateway Pod ×1&#xa;鉴权/路由/限流&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="50" width="160" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-4" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Nacos Pod ×1&#xa;服务注册/配置中心&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="50" width="140" x="460" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-5" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="待办服务 Pod ×1&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-6" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="流程服务 Pod ×1&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="40" width="120" x="180" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-7" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="新闻服务 Pod ×1&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="40" width="120" x="320" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-8" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="门户服务 Pod ×1&#xa;⚠️ 单点" vertex="1">
+          <mxGeometry height="40" width="120" x="460" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-9" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="text;fontStyle=2;fontSize=11;" value="服务间通过 Feign+Nacos 调用" vertex="1">
+          <mxGeometry height="20" width="280" x="160" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-10" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="MySQL 共享实例&#xa;⚠️ 多项目共用，无隔离" vertex="1">
+          <mxGeometry height="50" width="200" x="100" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-11" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Redis" vertex="1">
+          <mxGeometry height="50" width="100" x="340" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-12" parent="zG-Z_iHdJTuJkxTBnAjA-1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Nacos Config&#xa;配置存储" vertex="1">
+          <mxGeometry height="50" width="120" x="460" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-13" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-2" target="zG-Z_iHdJTuJkxTBnAjA-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-14" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-3" target="zG-Z_iHdJTuJkxTBnAjA-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-15" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-3" target="zG-Z_iHdJTuJkxTBnAjA-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-16" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-3" target="zG-Z_iHdJTuJkxTBnAjA-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-17" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-3" target="zG-Z_iHdJTuJkxTBnAjA-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-18" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-4" style="dashed=1;endArrow=none;" target="zG-Z_iHdJTuJkxTBnAjA-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-19" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-5" target="zG-Z_iHdJTuJkxTBnAjA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-20" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-6" target="zG-Z_iHdJTuJkxTBnAjA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-21" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-7" target="zG-Z_iHdJTuJkxTBnAjA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-22" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-8" target="zG-Z_iHdJTuJkxTBnAjA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zG-Z_iHdJTuJkxTBnAjA-23" edge="1" parent="zG-Z_iHdJTuJkxTBnAjA-1" source="zG-Z_iHdJTuJkxTBnAjA-5" target="zG-Z_iHdJTuJkxTBnAjA-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
